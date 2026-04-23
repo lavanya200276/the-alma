@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ALMA | Dark Gym Gear & Anime Shakers</title>
+    <meta name="description"
+        content="Infinite Choices, Singular Soul. Dark gym gear forged on steel. Choose your element and equip our premium anime print shakers.">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Jura:wght@400;600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Kanji Watermark -->
+    <div class="bg-kanji">魂</div> <!-- Soul -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="kanji-logo">無限</span> <!-- Infinite -->
+            THE ALMA
+        </div>
+        <div class="nav-links">
+            <a href="#gear">Gear</a>
+            <a href="#forge">The Forge</a>
+            <a href="#legion">Legion</a>
+        </div>
+        <a href="#forge" class="nav-cta">Awaken Yours</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title glitch" data-text="INFINITE CHOICES.">INFINITE CHOICES.<br><span
+                    class="accent-text">SINGULAR SOUL.</span></h1>
+            <p class="hero-subtitle">Dark Gym Gear, Forged on Steel. Choose Your Element.</p>
+            <div class="hero-buttons">
+                <a href="#forge" class="btn btn-primary"><i class="fa-solid fa-fire-flame-curved"></i> Enter The
+                    Forge</a>
+                <a href="#gear" class="btn btn-secondary">View Elements</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-val">S-RANK</span>
+                    <span class="stat-label">Durability</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">24H</span>
+                    <span class="stat-label">Cryo-Lock</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-val">100%</span>
+                    <span class="stat-label">Power</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <!-- Anime/Dark aesthetic Shaker Background -->
+            <img src="images/alma.jpeg" alt="The Alma Shaker" class="hero-bottle">
+            <div class="anime-slash"></div>
+            <div class="glow-effect red-glow"></div>
+        </div>
+    </section>
+
+    <!-- Gear Info Section -->
+    <section class="product-info" id="gear">
+        <div class="section-title-wrapper">
+            <h2 class="section-heading">FORGED IN <span class="accent-text">SHADOWS</span></h2>
+            <div class="kanji-sub">影</div>
+        </div>
+        <div class="product-grid">
+            <div class="product-details">
+                <p class="product-desc">Equip yourself with elite performance gear. Our double-walled, void-black
+                    stainless steel shakers are stamped with high-grade anime insignias that won't fade during combat.
+                    Whether you draw power from fire, lightning, or darkness, choose your elemental print and ascend.
+                </p>
+
+                <ul class="feature-list anime-features">
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-khanda"></i></div>
+                        <div>
+                            <h4>Indestructible Core</h4>
+                            <p>Pro-grade stainless steel survives the toughest raids.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-dragon"></i></div>
+                        <div>
+                            <h4>Eternal Prints</h4>
+                            <p>Advanced laser-etching means your anime print never peels off.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                        <div>
+                            <h4>Absolute Seal</h4>
+                            <p>Zero leaks, absolute containment for your elixirs and pre-workout.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="product-gallery">
+                <div class="gallery-card">
+                    <img src="images/alma2.jpeg" alt="Anime Art Overlay Abstract">
+                    <div class="gallery-overlay">
+                        <h3>AWAKENING</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Forge (Customization) Section -->
+    <section class="customization-studio" id="forge">
+        <div class="section-title-wrapper text-center">
+            <h2 class="section-heading">CHOOSE YOUR <span class="accent-text">ELEMENT</span></h2>
+            <div class="kanji-sub" style="right: auto; left: 50%; transform: translateX(-50%); opacity: 0.05;">錬金</div>
+        </div>
+
+        <div class="studio-grid">
+            <!-- Left: Live Preview -->
+            <div class="preview-container">
+                <div class="bottle-preview">
+                    <!-- Base Bottle -->
+                    <img src="images/alma.jpeg" class="bottle-base" alt="Blank Bottle">
+                    <!-- Color Overlay -->
+                    <div class="bottle-overlay" id="color-overlay"></div>
+                    <!-- Anime Graphic/Print Overlay -->
+                    <div class="anime-print-container" id="anime-print">
+                        <i class="fa-solid fa-fire fa-4x print-icon" id="print-icon-elem"></i>
+                        <div class="print-kanji" id="print-kanji-elem">炎</div>
+                    </div>
+                </div>
+                <!-- Scanning/Loading overlay -->
+                <div class="loading-overlay" id="preview-loader">
+                    <div class="scanline"></div>
+                    <div class="spinner-text">SYNCHRONIZING...</div>
+                </div>
+            </div>
+
+            <!-- Right: Controls -->
+            <div class="controls-container">
+                <div class="control-card anime-card">
+                    <h3>[01] SELECT ANIME PRINT</h3>
+                    <div class="print-options">
+                        <label class="print-option">
+                            <input type="radio" name="print" value="berserk" checked>
+                            <div class="print-box">
+                                <i class="fa-solid fa-fire"></i>
+                                <span>FLAME DEMON</span>
+                            </div>
+                        </label>
+                        <label class="print-option">
+                            <input type="radio" name="print" value="shinobi">
+                            <div class="print-box">
+                                <i class="fa-solid fa-bolt"></i>
+                                <span>THUNDER NINJA</span>
+                            </div>
+                        </label>
+                        <label class="print-option">
+                            <input type="radio" name="print" value="reaper">
+                            <div class="print-box">
+                                <i class="fa-solid fa-skull"></i>
+                                <span>SHADOW REAPER</span>
+                            </div>
+                        </label>
+                        <label class="print-option">
+                            <input type="radio" name="print" value="mech">
+                            <div class="print-box">
+                                <i class="fa-solid fa-robot"></i>
+                                <span>CYBER MECH</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-card anime-card">
+                    <h3>[02] CHOOSE ARMOR COLOR</h3>
+                    <div class="color-options">
+                        <label class="color-option">
+                            <input type="radio" name="color" value="void" checked>
+                            <span class="color-swatch" style="background: #111;"></span>
+                            <span class="color-name">Void Black</span>
+                        </label>
+                        <label class="color-option">
+                            <input type="radio" name="color" value="blood">
+                            <span class="color-swatch" style="background: #600;"></span>
+                            <span class="color-name">Blood Iron</span>
+                        </label>
+                        <label class="color-option">
+                            <input type="radio" name="color" value="phantom">
+                            <span class="color-swatch" style="background: #1a1a2e;"></span>
+                            <span class="color-name">Phantom Blue</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="control-card anime-card">
+                    <h3>[03] ENGRAVE HUNTER TAG (Optional)</h3>
+                    <input type="text" id="engraving-input" class="cyber-input" placeholder="Enter Codename..."
+                        autocomplete="off" maxlength="12">
+                </div>
+
+                <div class="order-summary cyber-summary">
+                    <div class="summary-row">
+                        <span>THE ALMA SHAKER:</span>
+                        <span>₹899</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>TOTAL POWER:</span>
+                        <span class="accent-text">₹899</span>
+                    </div>
+                    <!-- Order Button mapped to WhatsApp -->
+                    <button class="btn btn-primary order-btn glitch-hover" id="place-order-btn">
+                        EXECUTE PROTOCOL [ORDER]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Legion -->
+    <section class="social-proof" id="legion">
+        <h2 class="section-heading" style="text-align: center;">JOIN THE <span class="accent-text">LEGION</span></h2>
+
+        <div class="review-grid">
+            <div class="review-card cyber-border">
+                <div class="stars">Lavanya</div>
+                <p>"The print quality is absurd. Looks straight out of Neo-Tokyo. Holds my pre-workout like a tank and
+                    keeps it icy for the whole session. THE ALMA is elite."</p>
+                <div class="reviewer">// JIN_WOO</div>
+            </div>
+            <div class="review-card cyber-border">
+                <div class="stars">Srujana</div>
+                <p>"Finally dark gym gear that actually has aesthetics! The Shadow Reaper print on the Void Black shaker
+                    is incredible. I take it everywhere."</p>
+                <div class="reviewer">// KIRA_09</div>
+            </div>
+            <div class="review-card cyber-border">
+                <div class="stars">Neha</div>
+                <p>"Exceeded expectations. The metal finish with the anime emblem feels premium and heavy. Doesn't smell
+                    after protein either. 10/10 weapon of choice."</p>
+                <div class="reviewer">// EREN_J</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="brand">
+                <h2 style="font-family: 'Teko', sans-serif; font-size: 2.5rem; letter-spacing: 2px;">THE ALMA</h2>
+                <p>Infinite Choices, Singular Soul.<br>Dark Gym Gear. Choose Your Element.</p>
+            </div>
+            <div class="links">
+                <h4>Queries</h4>
+                <a href="#">FAQ / Lore</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns & Exchange</a>
+            </div>
+            <div class="legal">
+                <p>&copy; <span id="year"></span> THE ALMA SYNDICATE. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="#forge" class="btn btn-primary glitch-hover">AWAKEN YOURS NOW</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
